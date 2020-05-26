@@ -1,0 +1,77 @@
+﻿<Page x:Class="RCClient.HomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RCClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="Reaction Tester Client">
+
+    <Page.Background>
+        <ImageBrush ImageSource="Resources/background.png"/>
+    </Page.Background>
+
+        <StackPanel>
+
+            <!-- Arduino based label -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1.75*" />
+                    <ColumnDefinition Width="3.5*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <TextBlock Grid.Column="1" TextWrapping="WrapWithOverflow" Text="Arduino based" FontSize="72" HorizontalAlignment="Center" Foreground="White" FontStyle="Italic" FontWeight="Bold" FontFamily="Consolas" />
+
+                <!-- Connection info -->
+                <StackPanel Grid.Column="0" Orientation="Horizontal" Margin="15">
+
+                    <TextBlock Text="Connection case: " Foreground="White" FontSize="16" HorizontalAlignment="Center" VerticalAlignment="Center" TextWrapping="WrapWithOverflow" />
+
+                    <Grid>
+                        <Image x:Name="RedDotImage" Height="18" Width="18" Margin="5 5 0 0" Source="Resources/red_dot.png" Visibility="Hidden" />
+                        <Image x:Name="GreenDotImage" Height="18" Width="18" Margin="5 5 0 0" Source="Resources/green_dot.png" Visibility="Hidden"/>
+                    </Grid>
+
+                </StackPanel>
+
+            </Grid>
+
+            <!-- Reaction tester label -->
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <TextBlock Grid.Column="1" TextWrapping="WrapWithOverflow" Text="REACTION TESTER" FontSize="30" FontFamily="Consolas" Foreground="White" FontStyle="Italic" Margin="0 10" />
+            </Grid>
+
+            <!-- Buttons -->
+            <Grid Margin="0 275 0 0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="PlayButton" Click="PlayButton_Click"  Grid.Column="1" Content="Play" Padding="10 10" FontSize="16" />
+
+            </Grid>
+
+            <Grid Margin="0 20 0 0">
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="3*" />
+                </Grid.ColumnDefinitions>
+
+                <Button Grid.Column="1" Content="About" Padding="10 10" FontSize="16" Click="OnSettings_Click" />
+
+            </Grid>
+
+        </StackPanel>
+</Page>
