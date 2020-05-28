@@ -1,0 +1,97 @@
+﻿<Page x:Class="RCClient.PostGamePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:RCClient"
+      mc:Ignorable="d" 
+      d:DesignHeight="720" d:DesignWidth="1280"
+      Title="PostGamePage">
+
+    <Page.Background>
+        <ImageBrush ImageSource="Resources/background.png" />
+    </Page.Background>
+
+    <StackPanel>
+    
+        <FlowDocumentScrollViewer HorizontalAlignment="Center" Width="1000" IsToolBarVisible="False" VerticalScrollBarVisibility="Hidden">
+            <FlowDocument>
+
+                <Table CellSpacing="20" x:Name="Table">
+
+                    <Table.Columns>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                        <TableColumn/>
+                    </Table.Columns>
+
+                    <TableRowGroup>
+
+                        <!-- Title row for the table. -->
+                        <TableRow Background="SkyBlue">
+                            <TableCell ColumnSpan="10" TextAlignment="Center">
+                                <Paragraph FontSize="24pt" FontWeight="Bold">Results</Paragraph>
+                            </TableCell>
+                        </TableRow>
+
+                        <!-- Header row for the table. -->
+                        <TableRow Background="LightGoldenrodYellow">
+                            <TableCell ColumnSpan="2">
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold"
+                                           TextAlignment="Center">Nickname</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold"
+                                           TextAlignment="Center">Attempt 1</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold"
+                                           TextAlignment="Center">Attempt 2</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold"
+                                           TextAlignment="Center">Attempt 3</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold"
+                                           TextAlignment="Center">Attempt 4</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold"
+                                           TextAlignment="Center">Attempt 5</Paragraph>
+                            </TableCell>
+                            <TableCell>
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold"
+                                           TextAlignment="Center">Average</Paragraph>
+                            </TableCell>
+                            <TableCell ColumnSpan="2">
+                                <Paragraph FontSize="16" 
+                                           FontWeight="Bold" 
+                                           TextAlignment="Center">Best</Paragraph>
+                            </TableCell>
+                        </TableRow>
+                    </TableRowGroup>
+                </Table>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+
+
+        <Button x:Name="GoBackToHomeScreen" Content="Go back" Click="GoBackToHomeScreen_Click"/>
+
+    </StackPanel>
+
+</Page>
